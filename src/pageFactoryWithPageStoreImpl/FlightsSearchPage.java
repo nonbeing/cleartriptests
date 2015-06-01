@@ -16,25 +16,25 @@ import java.util.concurrent.TimeUnit;
 public class FlightsSearchPage {
     WebDriver driver;
 
-    @FindBy(id = "one_way")
+    @FindBy(id = "OneWay")
     private WebElement oneWayJourneySelection;
 
-    @FindBy(id = "rnd_trip")
+    @FindBy(id = "RoundTrip")
     private WebElement returnTripJourneySelection;
 
-    @FindBy(id = "dpt_date")
+    @FindBy(id = "FromDate")
     private WebElement departureDateField;
 
-    @FindBy(id = "rtn_date")
+    @FindBy(id = "ToDate")
     private WebElement returnDateField;
 
-    @FindBy(id = "origin_autocomplete")
+    @FindBy(id = "From")
     private WebElement originField;
 
-    @FindBy(id = "destination_autocomplete")
+    @FindBy(id = "To")
     private WebElement destinationField;
 
-    @FindBy(id = "button_flight_search")
+    @FindBy(id = "SearchBtn")
     private WebElement searchButton;
 
 

@@ -81,39 +81,39 @@ public class Chapter_03_IntroducingSetupAndTearDown {
     }
 
     private void searchForTheJourney() {
-        driver.findElement(By.id("button_flight_search")).click();
+        driver.findElement(By.id("SearchBtn")).click();
     }
 
 
     private void enterDepartureDate() {
-        driver.findElement(By.id("dpt_date")).clear();
-        driver.findElement(By.id("dpt_date")).sendKeys(tomorrow());
+        driver.findElement(By.id("FromDate")).clear();
+        driver.findElement(By.id("FromDate")).sendKeys(tomorrow());
     }
 
     private void enterReturnDate() {
-        driver.findElement(By.id("rtn_date")).clear();
-        driver.findElement(By.id("rtn_date")).sendKeys(dayAfterTomorrow());
+        driver.findElement(By.id("ToDate")).clear();
+        driver.findElement(By.id("ToDate")).sendKeys(dayAfterTomorrow());
     }
 
 
     private void enterDestinationAs(String destination) {
-        driver.findElement(By.id("destination_autocomplete")).clear();
-        driver.findElement(By.id("destination_autocomplete")).sendKeys(destination);
+        driver.findElement(By.id("To")).clear();
+        driver.findElement(By.id("To")).sendKeys(destination);
     }
 
 
     private void enterOriginAs(String origin) {
-        driver.findElement(By.id("origin_autocomplete")).clear();
-        driver.findElement(By.id("origin_autocomplete")).sendKeys(origin);
+        driver.findElement(By.id("From")).clear();
+        driver.findElement(By.id("From")).sendKeys(origin);
     }
 
 
     private void chooseToHaveAOneWayJourney() {
-        driver.findElement(By.id("one_way")).click();
+        driver.findElement(By.id("OneWay")).click();
     }
 
     private void chooseToHaveAReturnJourney() {
-        driver.findElement(By.id("rnd_trip")).click();
+        driver.findElement(By.id("RoundTrip")).click();
     }
 
 
