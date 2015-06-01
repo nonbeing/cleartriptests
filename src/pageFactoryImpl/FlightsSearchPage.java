@@ -16,7 +16,8 @@ import java.util.concurrent.TimeUnit;
 public class FlightsSearchPage {
     WebDriver driver;
 
-    @FindBy(id = "one_way")
+//    @FindBy(id = "one_way")
+    @FindBy(id = "oneWay")
     private WebElement oneWayJourneySelection;
 
     @FindBy(id = "rnd_trip")

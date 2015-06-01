@@ -18,6 +18,6 @@ expecting a response for the same.
 
 We have replicated the same using the JourneyDetails class in here.
 
-Also notice the JourneyDetailsBuilder class, it is basically builiding the journey details object with some basic default
+Also notice the JourneyDetailsBuilder class, it is basically building the journey details object with some basic default
 data and overriding the same with any specific test data needs that we might have.
 
