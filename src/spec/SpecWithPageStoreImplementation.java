@@ -33,7 +33,10 @@ public class SpecWithPageStoreImplementation {
 
 
     public void hasJourneyOptionsAvailableForHisOutboundJourney() {
-        Assert.assertTrue(pageStore.get(SearchResultsPage.class).resultsAppearForOutboundJourney());
+    	SearchResultsPage page = pageStore.get(SearchResultsPage.class);
+    	boolean x = page.resultsAppearForOutboundJourney();
+//    	System.out.println("[DEBUG] x is: " + x);
+        Assert.assertTrue(x);
     }
 
     public void searchesForAReturnJourneyWith(JourneyDetails journeyDetails) {

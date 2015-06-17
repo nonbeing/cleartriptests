@@ -40,7 +40,7 @@ public class Chapter_09_AbstractingPageNavigationFromUserSpecifications {
 
         //create your test data - the journey detail domain object
         JourneyDetails journeyDetails = new JourneyDetailsBuilder().isOneWay(true).
-                withOrigin("Bangalore").withDestination("Delhi").
+                withOrigin("Bangalore").withDestination("Mumbai").
                 withDepartureDate(tomorrow()).build();
 
         user.searchesForAOneWayJourneyWith(journeyDetails);
@@ -48,12 +48,12 @@ public class Chapter_09_AbstractingPageNavigationFromUserSpecifications {
     }
 
 
-//    @Test
+    @Test
     public void testThatResultsAppearForAReturnJourney(){
 
         //create your test data - the journey detail domain object
         JourneyDetails journeyDetails = new JourneyDetailsBuilder().isOneWay(false).
-                withOrigin("Bangalore").withDestination("Delhi").
+                withOrigin("Bangalore").withDestination("Mumbai").
                 withDepartureDate(tomorrow()).withReturnDate(dayAfterTomorrow()).build();
 
         user.searchesForAReturnJourneyWith(journeyDetails);
@@ -65,7 +65,6 @@ public class Chapter_09_AbstractingPageNavigationFromUserSpecifications {
     public void teardown(){
         //close the browser
         pageStore.destroy();
-
     }
 
 

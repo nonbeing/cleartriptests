@@ -141,13 +141,7 @@ public class FlightsSearchPage {
         this.chooseToHaveAReturnJourney();
         
         this.enterOriginAndSelectAutocomplete(journeyDetails.getOrigin());
-//        this.enterOriginAs("Bangalore");
-//        this.selectTheFirstAvailableAutoCompleteOption("ui-id-1");
-
         this.enterDestinationAndSelectAutocomplete(journeyDetails.getDestination());
-//        this.enterDestinationAs(journeyDetails.getDestination());
-//        this.selectTheFirstAvailableAutoCompleteOption("ui-id-2");
-
         this.enterDepartureDateAs(journeyDetails.getDepartureDate());
         this.enterReturnDateAs(journeyDetails.getReturnDate());
         searchButton.click();
