@@ -21,7 +21,7 @@ public class PageStore {
     List<Object> pages;
 
     public PageStore() {
-        webDriver = new ChromeDriver();
+        webDriver = new FirefoxDriver();
         pages = new ArrayList<Object>();
     }
 

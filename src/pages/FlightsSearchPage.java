@@ -19,25 +19,25 @@ public class FlightsSearchPage {
     }
 
     public void enterDepartureDateAs(String date) {
-        driver.findElement(By.id("FromDate")).clear();
-        driver.findElement(By.id("FromDate")).sendKeys(date);
+        driver.findElement(By.id("DepartDate")).clear();
+        driver.findElement(By.id("DepartDate")).sendKeys(date);
     }
 
     public void enterReturnDateAs(String date) {
-        driver.findElement(By.id("ToDate")).clear();
-        driver.findElement(By.id("ToDate")).sendKeys(date);
+        driver.findElement(By.id("ReturnDate")).clear();
+        driver.findElement(By.id("ReturnDate")).sendKeys(date);
     }
 
 
     public void enterDestinationAs(String destination) {
-        driver.findElement(By.id("To")).clear();
-        driver.findElement(By.id("To")).sendKeys(destination);
+        driver.findElement(By.id("ToTag")).clear();
+        driver.findElement(By.id("ToTag")).sendKeys(destination);
     }
 
 
     public void enterOriginAs(String origin) {
-        driver.findElement(By.id("From")).clear();
-        driver.findElement(By.id("From")).sendKeys(origin);
+        driver.findElement(By.id("FromTag")).clear();
+        driver.findElement(By.id("FromTag")).sendKeys(origin);
     }
 
 

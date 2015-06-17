@@ -43,15 +43,12 @@ public class Chapter_09_AbstractingPageNavigationFromUserSpecifications {
                 withOrigin("Bangalore").withDestination("Delhi").
                 withDepartureDate(tomorrow()).build();
 
-
         user.searchesForAOneWayJourneyWith(journeyDetails);
         user.hasJourneyOptionsAvailableForHisOutboundJourney();
-
-
     }
 
 
-    @Test
+//    @Test
     public void testThatResultsAppearForAReturnJourney(){
 
         //create your test data - the journey detail domain object
@@ -61,8 +58,6 @@ public class Chapter_09_AbstractingPageNavigationFromUserSpecifications {
 
         user.searchesForAReturnJourneyWith(journeyDetails);
         user.hasJourneyOptionsAvailableForTheReturnJourney();
-
-
     }
 
 

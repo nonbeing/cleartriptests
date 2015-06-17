@@ -25,19 +25,19 @@ public class FlightsSearchPage {
     private WebElement returnTripJourneySelection;
 
 //    @FindBy(id = "dpt_date")
-    @FindBy(id = "FromDate")
+    @FindBy(id = "DepartDate")
     private WebElement departureDateField;
 
 //    @FindBy(id = "rtn_date")
-    @FindBy(id = "ToDate")
+    @FindBy(id = "ReturnDate")
     private WebElement returnDateField;
 
 //    @FindBy(id = "origin_autocomplete")
-    @FindBy(id = "From")
+    @FindBy(id = "FromTag")
     private WebElement originField;
 
 //    @FindBy(id = "destination_autocomplete")
-    @FindBy(id = "To")
+    @FindBy(id = "ToTag")
     private WebElement destinationField;
 
 //    @FindBy(id = "button_flight_search")
@@ -82,7 +82,7 @@ public class FlightsSearchPage {
     }
 
 
-    public void selectTheFirstAvailableAutoCompleteOption() {
+    public void selectTheFirstAvailableAutoCompleteOption(final String autoCompleteID) {
         Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(30, TimeUnit.SECONDS)
                 .pollingEvery(1, TimeUnit.SECONDS)
@@ -90,7 +90,8 @@ public class FlightsSearchPage {
 
         WebElement optionListElement = wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
-                return driver.findElement(By.id("autocompleteOptionsContainer"));
+//            	return driver.findElement(By.id("autocompleteOptionsContainer"));
+                return driver.findElement(By.id(autoCompleteID));
             }
         });
 
@@ -109,10 +110,10 @@ public class FlightsSearchPage {
         this.chooseToHaveAOneWayJourney();
 
         this.enterOriginAs("Bangalore");
-        this.selectTheFirstAvailableAutoCompleteOption();
+        this.selectTheFirstAvailableAutoCompleteOption("ui-id-1");
 
         this.enterDestinationAs("Delhi");
-        this.selectTheFirstAvailableAutoCompleteOption();
+        this.selectTheFirstAvailableAutoCompleteOption("ui-id-2");
 
         this.enterDepartureDateAs(journeyDetails.getDepartureDate());
         SearchResultsPage searchResultsPage = this.searchForTheJourney();
@@ -124,10 +125,10 @@ public class FlightsSearchPage {
         this.chooseToHaveAReturnJourney();
 
         this.enterOriginAs("Bangalore");
-        this.selectTheFirstAvailableAutoCompleteOption();
+        this.selectTheFirstAvailableAutoCompleteOption("ui-id-1");
 
         this.enterDestinationAs("Delhi");
-        this.selectTheFirstAvailableAutoCompleteOption();
+        this.selectTheFirstAvailableAutoCompleteOption("ui-id-2");
 
         this.enterDepartureDateAs(journeyDetails.getDepartureDate());
         this.enterReturnDateAs(journeyDetails.getReturnDate());

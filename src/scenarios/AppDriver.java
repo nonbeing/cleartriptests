@@ -9,7 +9,7 @@ public class AppDriver {
     WebDriver driver;
 
     public AppDriver(){
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
     }
 
 

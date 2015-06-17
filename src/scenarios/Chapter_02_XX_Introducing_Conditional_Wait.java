@@ -63,8 +63,8 @@ public class Chapter_02_XX_Introducing_Conditional_Wait {
 
 
     private void enterDepartureDate() {
-        driver.findElement(By.id("FromDate")).clear();
-        driver.findElement(By.id("FromDate")).sendKeys(tomorrow());
+        driver.findElement(By.id("DepartDate")).clear();
+        driver.findElement(By.id("DepartDate")).sendKeys(tomorrow());
     }
 
 

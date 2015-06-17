@@ -86,13 +86,13 @@ public class Chapter_03_IntroducingSetupAndTearDown {
 
 
     private void enterDepartureDate() {
-        driver.findElement(By.id("FromDate")).clear();
-        driver.findElement(By.id("FromDate")).sendKeys(tomorrow());
+        driver.findElement(By.id("DepartDate")).clear();
+        driver.findElement(By.id("DepartDate")).sendKeys(tomorrow());
     }
 
     private void enterReturnDate() {
-        driver.findElement(By.id("ToDate")).clear();
-        driver.findElement(By.id("ToDate")).sendKeys(dayAfterTomorrow());
+        driver.findElement(By.id("ReturnDate")).clear();
+        driver.findElement(By.id("ReturnDate")).sendKeys(dayAfterTomorrow());
     }
 
 
